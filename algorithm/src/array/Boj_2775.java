@@ -1,7 +1,7 @@
-package algorithm;
+package array;
 
 import java.util.Scanner;
-
+//부녀회장
 public class Boj_2775 {
 
 	public static void main(String[] args) {

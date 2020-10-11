@@ -1,7 +1,7 @@
-package algorithm;
+package math;
 
 import java.util.Scanner;
-
+//직사각형 탈출
 public class Boj_1085 {
 
 	public static void main(String[] args) {

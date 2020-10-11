@@ -1,7 +1,7 @@
-package algorithm;
+package string;
 
 import java.util.Scanner;
-
+//알파벳찾기
 public class Boj_10809 {
 	public static void show(int[] result) {
 		for(int i=0; i<result.length; i++) {

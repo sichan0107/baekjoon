@@ -1,9 +1,9 @@
-package algorithm;
+package datasStructure;
 
 import java.util.NoSuchElementException;
 
-// 애당초 노드란 주소값의 개념인듯
-class Queue<T> {
+//애당초 노드란 주소값의 개념인듯
+public class LinkedQueue<T> {
 	class Node<T> {
 		private T data; //데이터 타입
 		private Node<T> next; // 다음 노드 주소
@@ -51,11 +51,10 @@ class Queue<T> {
 	public boolean isEmpty() {
 		return first == null;
 	}
-}
 
-public class Test {
+
 	public static void main(String[] args) {
-		Queue<Integer> q = new Queue<Integer>();
+		LinkedQueue<Integer> q = new LinkedQueue<Integer>();
 		q.add(1);
 		q.add(2);
 		q.add(3);

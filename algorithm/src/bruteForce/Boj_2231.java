@@ -8,22 +8,31 @@ public class Boj_2231 {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-		int min = 0;
-		int cnt = 0; 
-		int tmp = 0; 
+		int min = 0; //최소값
+		int cnt = 0;  //자리수
+		int tmp = 0;
+		int start = 0; //시작점
+		int ans = 0; //결과
+		
 		while(n>0){
 			n = n / 10;
 			cnt++; 
 		}
 		
-		tmp = cnt * 9;
-		for(int i=1; i<tmp; i++) {
-			min = n - i;
-			
-			if(min < n - tmp) { 
-				System.out.println("0");
+		start = n - (cnt * 9);
+		for(int i=start; i<n; i++) {
+			min = i;
+			tmp = i;
+			while(tmp > 0) {
+				min = min + tmp%10;
+				tmp = tmp / 10;
+			}
+			if(min == n) {
+				ans = i;
+				break;
 			}
 		}
+		System.out.println(ans);
 
 	}
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // nlogn 시간복잡도의 알고리즘으로 풀어야함. 퀵,힙 등
 public class Boj_2751 {
-	public static int[] quickSort(int[] arr) {
+	public static int[] separate(int[] arr) {
 		int pivot = arr[0];
 		int stop1 = 0;
 		int stop2 = 0; //피봇보다 큰지 작은지 스탑 인덱스
@@ -35,12 +35,16 @@ public class Boj_2751 {
 		         
 		return arr;
 	}
-		   
+
+	public static int[] quickSort(int[] arr) {
+		return arr;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int arr[] = new int[n];
-		      
+		
 		for(int i=0; i<n; i++) {
 			arr[i] = sc.nextInt();
 		}

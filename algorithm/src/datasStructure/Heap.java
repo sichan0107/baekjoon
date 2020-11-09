@@ -29,6 +29,8 @@ public class Heap {
 		public void insert(int key) {
 			heap.add(key); // 새로운 노드를 힙의 마지막 노드에 이어서 삽입
 			int p = heap.size() - 1; //힙의 가장 최고 깊이와 최 우측인 부분에 새 노드를 추가한다. -> 완전 이진 트리 유지
+			
+			//heap.size -1 이 1보다 작아질때까지 진행 -> root로 이동
 			while(p < 1 || heap.get(p) < heap.get(p/2) ) {
 				int tmp = heap.get(p);
 				heap.set(p, heap.get(p/2));
@@ -37,6 +39,7 @@ public class Heap {
 			}
 		}
 		public void delete() {
+			if(heap.size() == 0) return;
 			
 		}
 		

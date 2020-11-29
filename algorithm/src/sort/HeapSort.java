@@ -41,6 +41,7 @@ public class HeapSort {
 		
 	}
 	
+	//힙 구성은 자식노드를 가진 부모노드들만 수행한다. 맨마지막 부모부터 수행하며 상위 부모로 올라간다.
 	public static void buildMaxHeap(int[] array, int size) {
 		//size = 맨 마지막 노드의 부모노드 위치, 여기부터 위로 올라가며 시작
 		for(int i = size / 2 - 1; i>=0; i--) {
@@ -81,11 +82,11 @@ public class HeapSort {
 	}
 	
 	public static void main(String[] args) {
-		int[] array = {200, 11, 60, 550, 23, 220, 20};
-		//int[] array = {200, 11, 60, 550, 23, 20, 20}; //중복값 허용 실험
+		//int[] array = {200, 11, 60, 550, 23, 220, 20};
+		int[] array = {200, 11, 60, 550, 23, 20, 20}; //중복값 허용 실험
 		
-		//maxHeapSort(array, array.length); // 최대힙은 오름차순 정렬
-		minHeapSort(array, array.length);
+		maxHeapSort(array, array.length); // 최대힙은 오름차순 정렬
+		//minHeapSort(array, array.length);
 		for(int i : array) {
 			System.out.println(i);
 		}
